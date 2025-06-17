@@ -1,15 +1,15 @@
-# svg-icon-lib
+# icon-svg-lib
 
 A lightweight Web Component library to easily use customizable SVG icons in any web framework (React, Vue, Angular, etc.).
 
 # Installation
 
 ```
-npm install svg-icon-lib
+npm install icon-svg-lib
 
 or
 
-yarn add svg-icon-lib
+yarn add icon-svg-lib
 ```
 
 # To know available icon details please click below link
@@ -22,7 +22,7 @@ https://edisondevadoss.github.io/lib-svg-icons-dashbaord/
 
 ```
 <script type="module">
-  import 'svg-icon-lib';
+  import 'icon-svg-lib';
 </script>
 
 <svg-icon name="user"></svg-icon>
@@ -33,7 +33,7 @@ https://edisondevadoss.github.io/lib-svg-icons-dashbaord/
 ```
 import React from 'react';
 import { createComponent } from '@lit/react';
-import { SvgIcon } from 'svg-icon-lib';
+import { SvgIcon } from 'icon-svg-lib';
 
 const Svg = createComponent({
   react: React,
@@ -199,7 +199,7 @@ Here's an example using multiple properties together:
 ```jsx
 import React from 'react';
 import { createComponent } from '@lit/react';
-import { SvgIcon } from 'svg-icon-lib';
+import { SvgIcon } from 'icon-svg-lib';
 
 const Svg = createComponent({
   react: React,
