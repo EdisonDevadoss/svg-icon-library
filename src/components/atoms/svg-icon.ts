@@ -11,7 +11,7 @@ export class SvgIcon extends BaseElement {
   @property({ type: String }) color: string = 'text-current';
   @property({ type: Number }) rotation: number = 0;
   @property({ type: Boolean }) disabled: boolean = false;
-  @property({ type: String }) title: string = '';
+  @property({ type: String }) override title: string = ''; // TODO: add title to the icon 
   @property({ type: String }) background: string = 'bg-transparent';
   @property({ type: String }) rounded: string = 'rounded-none';
   @property({ type: String }) borderColor: string = 'border-transparent';
@@ -58,7 +58,7 @@ export class SvgIcon extends BaseElement {
     return newSvg;
   }
 
-  render() {
+  override render() {
     const svg = icons[this.name as keyof typeof icons];
 
     return html`<span

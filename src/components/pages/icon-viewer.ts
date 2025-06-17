@@ -44,7 +44,7 @@ export class IconViewer extends BaseElement {
     }
   }
 
-  render() {
+  override render() {
     return html`
       <div class="w-full flex flex-col p-8 max-w-7xl mx-auto">
         <h3 class="text-2xl font-bold mb-8">Icon Viewer</h3>

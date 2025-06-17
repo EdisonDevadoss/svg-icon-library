@@ -10,7 +10,7 @@ export default defineConfig({
       entry: 'src/index.ts',
       name: 'svg-icon-lib',
       formats: ['es'],
-      fileName: (format) => `index.es.js`,
+      fileName: () => `index.es.js`,
     },
     rollupOptions: {
       external: ['lit'],
