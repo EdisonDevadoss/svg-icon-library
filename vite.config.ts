@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: 'src/index.ts',
-      name: 'svg-icon-lib',
+      name: 'icon-svg-lib',
       formats: ['es'],
       fileName: () => `index.es.js`,
     },

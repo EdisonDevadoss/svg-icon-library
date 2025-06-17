@@ -8,12 +8,12 @@ import './components/pages/icon-viewer';
 @customElement('my-element')
 export class MyElement extends BaseElement {
  
- static styles = unsafeCSS(style);
+ static override styles = unsafeCSS(style);
 
   @property({ type: String })
   name = 'World'
 
-  render() {
+  override render() {
     return html`
       <div class="bg-white">
         <h1 class="text-3xl font-bold underline">Hello ${this.name}</h1>

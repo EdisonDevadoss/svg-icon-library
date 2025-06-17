@@ -4,5 +4,5 @@ import style from '../index.css?inline';
 
 @customElement('base-element')
 export class BaseElement extends LitElement {
-  static styles = unsafeCSS(style);
+  static override styles = unsafeCSS(style);
 }
