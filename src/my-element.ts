@@ -20,10 +20,8 @@ export class MyElement extends BaseElement {
     return html`
       <div class="bg-white">
         <h1 class="text-3xl font-bold underline">Hello ${this.name}</h1>
-        <icon-viewer></icon-viewer>
-        
         <svg-icon 
-        name="user" 
+        name="down-arrow" 
         size="xxxl"
         color="text-success" 
         rotation="0"
@@ -32,6 +30,8 @@ export class MyElement extends BaseElement {
         borderColor="border-danger"
         borderWidth="border-4"
          ></svg-icon>
+        <icon-viewer></icon-viewer>
+        
       </div>
     `
   }

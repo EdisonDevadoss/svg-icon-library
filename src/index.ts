@@ -1,4 +1,4 @@
-import './index.css?inline';
+import './index.css';
 
 export * from './components/atoms';
 export * from './components/pages/icon-viewer';
