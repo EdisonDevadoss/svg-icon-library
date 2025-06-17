@@ -1,13 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 
 import { SvgIcon } from '../components/atoms/svg-icon.ts';
+import { icons } from '../config/constants.ts';
+
+const iconNames = Object.keys(icons);
 
 const meta = {
   title: 'Example/SvgIcon',
   tags: ['autodocs'],
   component: "svg-icon",
   argTypes: {
-      name: { control: 'select', options: ['user', 'search', 'settings', 'help', 'close'] },
+      name: { control: 'select', options: iconNames },
       size: { control: 'select', options: ['sm', 'md', 'lg', 'xl', 'xxl', 'xxxl', 'xxxxl'] },
       color: { control: 'select', options: ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'] },
       rotation: {

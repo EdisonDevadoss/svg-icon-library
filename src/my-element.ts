@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js'
 import style from './index.css?inline';
 import { BaseElement } from './base';
 import './components/atoms/svg-icon';
+import './components/pages/icon-viewer';
 
 @customElement('my-element')
 export class MyElement extends BaseElement {
@@ -16,7 +17,8 @@ export class MyElement extends BaseElement {
     return html`
       <div class="bg-white">
         <h1 class="text-3xl font-bold underline">Hello ${this.name}</h1>
-
+        <icon-viewer></icon-viewer>
+        
         <svg-icon 
         name="user" 
         size="xxxl"
