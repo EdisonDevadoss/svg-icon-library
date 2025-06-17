@@ -8,7 +8,10 @@ import './components/pages/icon-viewer';
 @customElement('my-element')
 export class MyElement extends BaseElement {
  
- static override styles = unsafeCSS(style);
+ static override styles = [
+  ...super.styles,
+  unsafeCSS(style)
+ ];
 
   @property({ type: String })
   name = 'World'
@@ -26,7 +29,7 @@ export class MyElement extends BaseElement {
         rotation="0"
         background="bg-transparent"
         rounded="rounded-full"
-        borderColor="border-success"
+        borderColor="border-danger"
         borderWidth="border-4"
          ></svg-icon>
       </div>

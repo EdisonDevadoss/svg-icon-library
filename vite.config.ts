@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
+    dts(),
   ],
   build: {
     lib: {
@@ -13,7 +15,11 @@ export default defineConfig({
       fileName: () => `index.es.js`,
     },
     rollupOptions: {
-      external: ['lit'],
+      external: ['lit', /^lit\/.*/],
     },
+    cssCodeSplit: false,
+  },
+  css: {
+    modules: false,
   },
 })

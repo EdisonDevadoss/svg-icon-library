@@ -1,12 +1,43 @@
 import { html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { css } from 'lit';
 
 import { icons } from '../../config/constants';
 import { BaseElement } from '../../base';
 
 @customElement('icon-viewer')
 export class IconViewer extends BaseElement {
+    
+  static override styles = [
+    ...super.styles,
+    css`
+      :host {
+        display: block;
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgb(226 232 240); /* bg-slate-200 */
+      }
+
+      .toast {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1e293b;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .toast.show {
+        opacity: 1;
+      }
+    `
+  ];
     
   @state() private searchQuery = '';
   // @state() private selectedIcon: { name: string; svg: string } | null = null;
