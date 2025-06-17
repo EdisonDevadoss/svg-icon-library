@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 
 import { SvgIcon } from '../components/atoms/svg-icon.ts';
-import { icons } from '../config/constants.ts';
-
-const iconNames = Object.keys(icons);
+import { iconNames } from '../config/constants.ts';
 
 const meta = {
   title: 'Example/SvgIcon',
