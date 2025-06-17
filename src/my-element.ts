@@ -1,0 +1,41 @@
+import { html, unsafeCSS } from 'lit'
+import { customElement, property } from 'lit/decorators.js'
+import style from './index.css?inline';
+import { BaseElement } from './base';
+import './components/atoms/svg-icon';
+
+@customElement('my-element')
+export class MyElement extends BaseElement {
+ 
+ static styles = unsafeCSS(style);
+
+  @property({ type: String })
+  name = 'World'
+
+  render() {
+    return html`
+      <div class="bg-white">
+        <h1 class="text-3xl font-bold underline">Hello ${this.name}</h1>
+
+        <svg-icon 
+        name="user" 
+        size="xxxl"
+        color="text-success" 
+        rotation="0"
+        background="bg-transparent"
+        rounded="rounded-full"
+        borderColor="border-success"
+        borderWidth="border-4"
+         ></svg-icon>
+      </div>
+    `
+  }
+
+
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'my-element': MyElement
+  }
+}
