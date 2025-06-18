@@ -12,6 +12,18 @@ or
 yarn add icon-svg-lib
 ```
 
+# CSS Import (Required for Tailwind Styles and Variables)
+
+**Important**: To ensure all Tailwind styles and variables (including borders and colors) work correctly, you need to import the full CSS in your application.
+
+## Import in your main CSS or JS/TS entry point
+
+```js
+import "icon-svg-lib/styles";
+```
+
+**Note**: If you're using a framework like React, Vue, or Angular, make sure to import the CSS in your main entry file (like `main.js`, `App.js`, or `index.js`).
+
 # To know available icon details please click below link
 
 https://edisondevadoss.github.io/lib-svg-icons-dashbaord/
@@ -34,6 +46,7 @@ https://edisondevadoss.github.io/lib-svg-icons-dashbaord/
 import React from 'react';
 import { createComponent } from '@lit/react';
 import { SvgIcon } from 'icon-svg-lib';
+import 'icon-svg-lib/variables'; // Required for border styles
 
 const Svg = createComponent({
   react: React,
@@ -200,6 +213,7 @@ Here's an example using multiple properties together:
 import React from 'react';
 import { createComponent } from '@lit/react';
 import { SvgIcon } from 'icon-svg-lib';
+import "icon-svg-lib/styles";
 
 const Svg = createComponent({
   react: React,

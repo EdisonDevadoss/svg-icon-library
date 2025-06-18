@@ -16,6 +16,9 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['lit', /^lit\/.*/],
+      output: {
+        assetFileNames: 'index.css'
+      },
     },
     cssCodeSplit: false,
   },

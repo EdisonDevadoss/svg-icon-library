@@ -23,11 +23,11 @@ export class MyElement extends BaseElement {
         <svg-icon 
         name="down-arrow" 
         size="xxxl"
-        color="text-success" 
+        color="info" 
         rotation="0"
-        background="bg-transparent"
+        background="bg-warning"
         rounded="rounded-full"
-        borderColor="border-danger"
+        borderColor="border-primary"
         borderWidth="border-4"
          ></svg-icon>
         <icon-viewer></icon-viewer>

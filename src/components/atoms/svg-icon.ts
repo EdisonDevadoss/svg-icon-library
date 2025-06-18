@@ -34,12 +34,15 @@ export class SvgIcon extends BaseElement {
     success: 'text-success',
     danger: 'text-danger',
     warning: 'text-warning',
+    info: 'text-info',
+    light: 'text-light',
+    dark: 'text-dark',
+    transparent: 'text-transparent',
   }
-
 
   private injectSizeIntoSvg(svg: string): string {
     const svgWithoutSize = svg.replace(
-      /\s+(transform|class|width|height)="[^"]*"/g,
+      /\s+(transform|class|width|height|fill)="[^"]*"/g,
       ''
     );
     const color = this.colors[this.color as keyof typeof this.colors] || this.color
